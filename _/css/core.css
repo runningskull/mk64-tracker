@@ -1,0 +1,260 @@
+/*-  BASE STYLES
+----------------------------------------------------------------------*/
+
+/*- self-clearing floats ----------*/
+
+.mod:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/*- fluid images and objects ----------*/
+
+img,
+object,
+embed {max-width: 100%;}
+
+
+/*- optional vanity styles ----------*/
+
+::selection {background: #c80000;}
+::-moz-selection {background: #c80000;}
+
+img::selection {background: transparent;}
+img::-moz-selection {background: transparent;}
+
+@media only screen and (max-device-width: 480px) {
+
+	html {-webkit-text-size-adjust: none}
+	a {-webkit-tap-highlight-color: rgba(200,0,0,0.4);}
+
+}
+
+
+/*- LET'S GET STARTED!
+----------------------------------------------------------------------*/
+
+body {
+	background-color: #fff;
+	color: #000;
+	font: normal 16px/22px "deva-ideal-1","deva-ideal-2",Helvetica, Arial, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
+
+abbr {
+	cursor: help;
+}
+
+#wrapper {
+/*     width: 480px; */
+    min-height: 320px !important;
+    height: 320px;
+    margin: 0 auto;
+    padding-top: 0px;
+    background: #eee;
+    position: relative;
+/*     z-index: 99; */
+}
+
+header h1 {
+	padding-top: 10px;
+    font-size: 32px;
+    text-align: center;
+    font-family: "deva-ideal-1","eva-ideal-2", Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+    header h1 a {
+        text-decoration: none;
+        color: #333;
+    }
+
+header h1.in-cup {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.35);
+    padding-top: 10px;
+}
+
+    header h1.in-cup span {
+        font-size: 13px;
+        color: #777;
+    }
+
+    header h1.in-cup span:after {
+        content: " »";
+    }
+
+nav {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+    nav ol {
+        list-style-type: none;
+        font-size: 1.3em;
+    }
+
+    nav li {
+        margin-bottom: 0.5em;
+    }
+
+        nav li a {
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            border-bottom: 1px dotted;
+        }
+
+nav.in-cup {
+
+}
+
+.record {
+    font-size: 4em;
+    line-height: 1.2em;
+    text-align: center;
+    font-family: "adaptive-mono-1","adaptive-mono-2","Courier New", monospace;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: #111;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+
+    .record:hover {
+        color: #990000;
+    }
+    
+    .record .meta {
+    	font-size: 12px;
+    	font-weight: normal;
+    	color: #333;
+    	margin: -5px auto 10px auto;
+    	padding: 0;
+    	line-height: 1em;
+    	text-shadow: none;
+    	text-align: right;
+    	padding-right: 0em;
+    	width: 30em;
+    }
+    
+	.record .player {
+		font-weight: 800;
+		font-style: italic;
+		font-size: 14px;
+		width: 3em;
+		text-align: center;
+		display: block;
+		float: right;
+	}
+
+.course.record {
+    border-bottom: 1px solid #ccc;
+}
+
+#times {
+    position: relative;
+}
+
+    #times .imgbox {
+        height: 32px;
+        width: 32px;
+        padding-top: 16px;
+        margin: 16px 0.85em 0 0;
+        float: right;
+        overflow: hidden;
+    }
+    
+    	#times .imgbox.solid {
+    		background: url('/_/img/solid.png') top center no-repeat;
+    	}
+    	
+    #times img {
+    	display: block;
+    }
+
+.arrow {
+    position: absolute;
+    font-size: 4em;
+    padding: 0 5px;
+    background-color: #ccc;
+    bottom: 0;
+    line-height: 320px;
+    z-index: 999;
+    background: #bbb;
+}
+
+    .arrow.previous {
+        left: 0;
+    }
+
+    .arrow.next {
+        right: 0;
+    }
+
+    .arrow a {
+        text-decoration: none;
+        border: none;
+        display: block;
+        color: #aaa;
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+    }
+
+#set-time {
+    width: 80%;
+    font-size: 1.5em;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+    #set-time input {
+        width: 3em;
+        font-size: 0.65em;
+        text-align: right;
+    }
+
+#set-char {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 1em auto;
+}
+
+	#set-char select {
+		margin-right: 1em;
+	}
+
+	#set-char label {
+		display: inline-block;
+		vertical-align: baseline;
+	}
+
+#submit-time {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 3em auto;
+}
+
+footer {
+    text-align: center;
+    margin-top: 0.5em;
+    position: relative;
+    background: #ccc;
+    color: #777;
+    font-size: 10px;
+}
+
+    footer a {
+        text-decoration: none;
+        border-bottom: 1px dotted;
+    }
